@@ -58,9 +58,9 @@ Generates and manages maintenance alerts based on vehicle data.
 
 5. **Launch the Python files:**
    - Run the following commands in the terminals in the three microservices project
-     - uvicorn app.main:api --reload --port 8000  for Vehicles microservice.
-     - uvicorn app.main:api --reload --port 8001  for Vehiclestracking microservice.
-     - uvicorn app.main:api --reload --port 8002  for alert microservice.
+     - **uvicorn app.main:api --reload --port 8000**  for Vehicles microservice.
+     - **uvicorn app.main:api --reload --port 8001**  for Vehiclestracking microservice.
+     - **uvicorn app.main:api --reload --port 8002**  for alert microservice.
    - Uncomment the lines below '''if __name__ == "__main__"''' in main.py of DataGenerator project, especially for 'for loop' to insert some values in 'Vehicles' table and then you comment it and run the program 
      once again to send streaming data to the microservices
 
