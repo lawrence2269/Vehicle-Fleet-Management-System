@@ -56,7 +56,12 @@ Generates and manages maintenance alerts based on vehicle data.
    - Install MySQL client and MySQL workbench.
    - Set the username, password, and database of your own and update the same in '.env' file in 4 project folders.
 
-4. **Launch the Python files:**
+4. **Add .env files**
+   - There is a file called "env.txt" inside each project, copy the contents of each env.txt file and create ".env" file in the below given appropriate places
+   - For DataGenerator project you can create .env file inside the project folder
+   - For 3 microservices, create the .env file inside the app folder.
+
+5. **Launch the Python files:**
    - Run the following commands in the terminals in the three microservices project
      - **uvicorn app.main:api --reload --port 8000**  for Vehicles microservice.
      - **uvicorn app.main:api --reload --port 8001**  for Vehiclestracking microservice.
@@ -64,16 +69,16 @@ Generates and manages maintenance alerts based on vehicle data.
    - Uncomment the lines below '''if __name__ == "__main__"''' in main.py of DataGenerator project, especially for 'for loop' to insert some values in 'Vehicles' table and then you comment it and run the program 
      once again to send streaming data to the microservices
 
-5. **Access the services:**
+6. **Access the services:**
 - **Vehicle Service:** http://127.0.0.1:8000
 - **Tracking Service:** http://127.0.0.1:8001
 - **Alert Service:** http://127.0.0.1:8002
 
-6. **Usage**
+7. **Usage**
 - Use the Vehicle Service to create, read, update, and delete vehicle data.
 - Use the Tracking Service to update and retrieve tracking data for vehicles.
 - Use the Alert Service to generate and retrieve maintenance alerts.
 
-7. **License**
+8. **License**
    
 This project is licensed under the MIT License.
